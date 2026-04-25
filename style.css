@@ -1,96 +1,60 @@
-:root {
-    --fuchsia-shine: #ff00ff;
-    --sky-pastel: #87ceeb;
-    --text-primary: #1e293b;
-    --card-bg: #ffffff;
-    --bg: #f8fafc;
-}
-
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     margin: 0;
-    background-color: var(--bg);
-    color: var(--text-primary);
-    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: #ffeef8; /* Rose très clair en fond */
 }
-
-h1, h2, h3 { font-family: 'Fredoka', sans-serif; }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 5%;
-    align-items: center;
-    position: sticky;
-    top: 0;
     background: white;
-    z-index: 1000;
-    border-bottom: 3px solid var(--fuchsia-shine);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 4px solid #ff00ff; /* Trait rose fuchsia */
 }
 
-.logo { font-weight: 700; font-size: 1.2em; color: var(--fuchsia-shine); }
-.logo span { color: var(--sky-pastel); }
+.logo { font-weight: bold; color: #ff00ff; font-size: 1.5em; }
 
 .hero {
-    height: 50vh;
-    background: linear-gradient(135deg, var(--sky-pastel) 0%, var(--fuchsia-shine) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    background: linear-gradient(to right, #ff00ff, #00ffff); /* Dégradé fuchsia et bleu */
     color: white;
+    padding: 40px;
+    text-align: center;
 }
 
-.hero h1 { font-size: 3.5em; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.2); }
-
-.main-container { padding: 60px 5%; }
-.section-title { font-size: 2.5em; text-align: center; color: var(--fuchsia-shine); margin-bottom: 40px; }
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .card {
-    background: var(--card-bg);
-    border-radius: 25px;
+    background: white;
+    width: 300px;
+    margin: 15px;
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 10px 20px rgba(255, 0, 255, 0.2); /* Ombre rose */
     transition: 0.3s;
-    box-shadow: 0 10px 20px rgba(255, 0, 255, 0.1);
 }
 
-.card:hover { transform: translateY(-10px); border: 2px solid var(--fuchsia-shine); }
+.card:hover { transform: scale(1.05); }
 
-.card-img {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
-    border-bottom: 4px solid var(--sky-pastel);
-}
+.card img { width: 100%; height: 200px; object-fit: cover; }
 
-.card-body { padding: 20px; }
+.info { padding: 15px; }
 
-.tag {
-    font-size: 0.7em;
-    padding: 5px 12px;
-    border-radius: 15px;
+.badge {
+    background: #ff00ff;
     color: white;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
 }
-
-.tag-luxury { background: var(--fuchsia-shine); }
-.tag-sport { background: #ff8c00; }
-.tag-heritage { background: #8a2be2; }
-.tag-culture { background: #00ced1; }
-.tag-politics { background: #cc0000; }
-.tag-urban { background: #2f4f4f; }
 
 footer {
-    text-align: center;
-    padding: 40px;
-    background: var(--text-primary);
+    background: #333;
     color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
