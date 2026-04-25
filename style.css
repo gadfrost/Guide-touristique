@@ -1,40 +1,48 @@
 :root {
-    --primary: #1a1a1a;
-    --accent: #d4af37; /* Or pour le côté "Ville Cuprifère" */
-    --bg: #ffffff;
-    --card-bg: #f8f9fa;
+    /* Nouvelle Palette Odile Shine */
+    --fuchsia-shine: #ff00ff; /* Rose fuchsia très vif */
+    --sky-pastel: #87ceeb; /* Bleu ciel doux */
+    --shine-accent: #00ffff; /* Cyan vibrant */
+    --text-primary: #1e293b;
+    --card-bg: #ffffff;
+    --bg: #f8fafc;
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     background-color: var(--bg);
-    color: var(--primary);
+    color: var(--text-primary);
     line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Fredoka', sans-serif; /* Police fun et ronde */
 }
 
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 5%;
+    padding: 15px 5%;
     align-items: center;
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
+    border-bottom: 3px solid var(--fuchsia-shine);
 }
 
-.logo { font-weight: 700; letter-spacing: 2px; }
-.logo span { color: var(--accent); }
-.author { font-weight: 300; font-size: 0.9em; }
+.logo { font-weight: 700; font-size: 1.2em; letter-spacing: 1px; color: var(--fuchsia-shine); }
+.logo span { color: var(--sky-pastel); }
+.author { font-weight: 400; font-size: 0.9em; color: #666; }
 
 /* Hero Section */
 .hero {
     height: 60vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://upload.wikimedia.org/wikipedia/commons/e/eb/Lubumbashi_Cathedral.jpg') center/cover;
+    /* Dégradé brillant et coloré */
+    background: linear-gradient(315deg, var(--sky-pastel) 0%, var(--fuchsia-shine) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,56 +50,78 @@ body {
     color: white;
 }
 
-.hero h1 { font-size: 4em; margin: 0; font-weight: 700; }
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 3.5em; margin: 0; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.hero p { font-size: 1.1em; max-width: 600px; margin: 20px auto; font-weight: 400; }
 
 /* Grid System */
-.container { padding: 80px 5%; }
-.section-title { font-size: 2em; margin-bottom: 40px; text-align: center; }
+.main-container { padding: 80px 5%; }
+.section-title { font-size: 2.2em; margin-bottom: 50px; text-align: center; color: var(--fuchsia-shine); }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
 }
 
 /* Cards */
 .card {
     background: var(--card-bg);
-    border-radius: 12px;
+    border-radius: 20px; /* Coins très arrondis */
     overflow: hidden;
-    transition: transform 0.4s ease;
-    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    /* Ombre colorée (fuchsia) au lieu de grise */
+    box-shadow: 0 8px 15px rgba(255, 0, 255, 0.1);
 }
 
-.card:hover { transform: translateY(-10px); }
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 25px rgba(255, 0, 255, 0.2);
+    border-color: var(--fuchsia-shine);
+}
 
 .card-img {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 3px solid var(--sky-pastel);
 }
 
 .card-body { padding: 25px; }
 
+/* Tags Colorés */
 .tag {
-    font-size: 0.7em;
+    font-size: 0.75em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--accent);
+    letter-spacing: 1.5px;
     font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 15px;
+    display: inline-block;
 }
 
-.card-body h3 { margin: 10px 0; font-size: 1.4em; }
-.card-body p { color: #666; font-size: 0.95em; }
+.tag-luxury { background-color: var(--fuchsia-shine); }
+.tag-sport { background-color: #ff8c00; } /* Orange vif */
+.tag-heritage { background-color: #8a2be2; } /* Violet */
+.tag-nature { background-color: #228b22; } /* Vert forêt */
+.tag-culture { background-color: var(--sky-pastel); }
 
+.card-body h3 { margin: 10px 0; font-size: 1.4em; color: var(--text-primary); }
+.card-body p { color: #555; font-size: 0.9em; margin-bottom: 0; }
+
+/* Footer */
 footer {
     text-align: center;
     padding: 50px;
-    background: #1a1a1a;
+    background: linear-gradient(315deg, var(--fuchsia-shine) 0%, var(--sky-pastel) 100%);
     color: white;
-    font-size: 0.8em;
-}
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5em; }
+    font-size: 0.9em;
+    border-top: 5px solid white;
 }
