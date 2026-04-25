@@ -3,62 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide touristique d'Odile</title>
+    <title>L'Shi City Guide | Par Odile</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>Bienvenue sur le Guide Touristique d'Odile</h1>
-        <p>Découvrez les plus beaux endroits de Lubumbashi, la ville cuprifère !</p>
+    <nav class="navbar">
+        <div class="logo">L'SHI <span>GUIDE</span></div>
+        <div class="author">By Odile</div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Explore Lubumbashi</h1>
+            <p>Le guide sélectif des meilleurs spots de la capitale du cuivre.</p>
+        </div>
     </header>
 
-    <main class="contenu">
-        <div class="lieu-card">
-            <div class="image-container">
-                <img src="https://all.accor.com/middleware/images/1580911760432/1621430932842/main-image-hotel.jpg" alt="Hôtel Grand Karavia">
-            </div>
-            <div class="info">
-                <h3>Pullman Grand Karavia</h3>
-                <p>C'est l'un des plus beaux hôtels de la ville, situé juste au bord du Lac Tshombe. C'est l'endroit parfait pour voir un beau coucher de soleil.</p>
-                <a href="https://all.accor.com/hotel/A0T4/index.fr.shtml" target="_blank">Visiter le site officiel</a>
-            </div>
-        </div>
+    <section class="container">
+        <h2 class="section-title">Les Incontournables</h2>
+        <div class="grid">
 
-        <div class="lieu-card">
-            <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Lubumbashi_Cathedral.jpg/800px-Lubumbashi_Cathedral.jpg" alt="Cathédrale de Lubumbashi">
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://all.accor.com/middleware/images/1580911760432/1621430932842/main-image-hotel.jpg');"></div>
+                <div class="card-body">
+                    <span class="tag">Luxury</span>
+                    <h3>Pullman Grand Karavia</h3>
+                    <p>Le spot iconique au bord du lac pour un café ou un sunset chill.</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Cathédrale Saints-Pierre-et-Paul</h3>
-                <p>Un bâtiment historique impressionnant construit il y a très longtemps. Elle se trouve au cœur de la ville et possède une architecture magnifique.</p>
-            </div>
-        </div>
 
-        <div class="lieu-card">
-            <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Stade_TP_Mazembe.jpg/800px-Stade_TP_Mazembe.jpg" alt="Stade TP Mazembe">
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Stade_TP_Mazembe.jpg');"></div>
+                <div class="card-body">
+                    <span class="tag">Sport</span>
+                    <h3>Stade TP Mazembe</h3>
+                    <p>L'énergie pure de Lubumbashi se trouve ici les jours de match.</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Stade du TP Mazembe</h3>
-                <p>Le temple du football à Lubumbashi ! C'est ici que les Corbeaux jouent leurs grands matchs dans une ambiance incroyable.</p>
-                <a href="https://www.tpmazembe.com/" target="_blank">Site du club</a>
-            </div>
-        </div>
 
-        <div class="lieu-card">
-            <div class="image-container">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/1e/86/0e/zoo-de-lubumbashi.jpg?w=800&h=-1&s=1" alt="Zoo de Lubumbashi">
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/eb/Lubumbashi_Cathedral.jpg');"></div>
+                <div class="card-body">
+                    <span class="tag">Heritage</span>
+                    <h3>Cathédrale Saints-Pierre-et-Paul</h3>
+                    <p>Un chef-d'œuvre architectural au cœur du centre-ville historique.</p>
+                </div>
             </div>
-            <div class="info">
-                <h3>Jardin Zoologique</h3>
-                <p>Un grand parc pour découvrir la nature et les animaux en famille. C'est un poumon vert très important pour notre ville.</p>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/1e/86/0e/zoo-de-lubumbashi.jpg?w=800');"></div>
+                <div class="card-body">
+                    <span class="tag">Nature</span>
+                    <h3>Jardin Zoologique</h3>
+                    <p>Une pause nature nécessaire pour s'évader de l'agitation urbaine.</p>
+                </div>
             </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Mus%C3%A9e_National_de_Lubumbashi.jpg/800px-Mus%C3%A9e_National_de_Lubumbashi.jpg');"></div>
+                <div class="card-body">
+                    <span class="tag">Culture</span>
+                    <h3>Musée National</h3>
+                    <p>Plongez dans l'histoire fascinante de la région du Katanga.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipN3-vD6S1pW_oU5yP_yXnL3-S9N6n_Y-f2G_f7_=s1360-w1360-h1020');"></div>
+                <div class="card-body">
+                    <span class="tag">Lifestyle</span>
+                    <h3>Hypnose Mall</h3>
+                    <p>Le point de rendez-vous moderne pour le shopping et les sorties entre amis.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Lubumbashi_post_office.jpg/800px-Lubumbashi_post_office.jpg');"></div>
+                <div class="card-body">
+                    <span class="tag">Urban</span>
+                    <h3>Place de la Poste</h3>
+                    <p>Le centre névralgique de la ville, entouré de bâtiments coloniaux.</p>
+                </div>
+            </div>
+
+             <div class="card">
+                <div class="card-img" style="background-image: url('https://www.luanocity.com/wp-content/uploads/2019/05/luano-city-banner.jpg');"></div>
+                <div class="card-body">
+                    <span class="tag">Business</span>
+                    <h3>Luano City</h3>
+                    <p>Le nouveau quartier moderne près de l'aéroport, symbole du futur de L'Shi.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://lh3.googleusercontent.com/p/AF1QipM_Mv3M6o6kR-U0kG7M2n9Lz4U6M3O2p5V_N_K_=s1360-w1360-h1020');"></div>
+                <div class="card-body">
+                    <span class="tag">Food</span>
+                    <h3>La Plage (Lac Tshombe)</h3>
+                    <p>Dîner les pieds (presque) dans l'eau avec une vue imprenable.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/B%C3%A2timent_du_30_Juin.jpg/800px-B%C3%A2timent_du_30_Juin.jpg');"></div>
+                <div class="card-body">
+                    <span class="tag">Politics</span>
+                    <h3>Bâtiment du 30 Juin</h3>
+                    <p>Siège de l'Assemblée provinciale, un lieu chargé d'histoire politique.</p>
+                </div>
+            </div>
+
         </div>
-    </main>
+    </section>
 
     <footer>
-        <p>Site réalisé par Odile - Classe de 6ème - 2024</p>
+        <p>&copy; 2024 L'Shi Digital Guide | Coded with pride by Odile</p>
     </footer>
 
 </body>
