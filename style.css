@@ -1,7 +1,6 @@
 :root {
     --fuchsia: #ff00ff;
     --cyan: #00ffff;
-    --blanc: #ffffff;
     --fond: #fff5fb;
 }
 
@@ -9,18 +8,14 @@ body {
     margin: 0;
     font-family: 'Fredoka', sans-serif;
     background-color: var(--fond);
-    overflow-x: hidden;
 }
 
 .navbar {
-    background: var(--blanc);
+    background: white;
     padding: 15px;
     text-align: center;
-    font-weight: bold;
     border-bottom: 4px solid var(--fuchsia);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    font-weight: bold;
 }
 
 .logo span { color: var(--cyan); }
@@ -28,11 +23,9 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--fuchsia), var(--cyan));
     color: white;
-    padding: 40px 20px;
+    padding: 30px;
     text-align: center;
 }
-
-.hero h1 { margin: 0; font-size: 2.2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
 
 .container {
     display: flex;
@@ -42,23 +35,23 @@ body {
 }
 
 .card {
-    background: var(--blanc);
+    background: white;
     width: 100%;
     max-width: 350px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(255, 0, 255, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    cursor: pointer;
 }
 
-.card:active { transform: scale(0.97); }
+/* On cache la case à cocher technique */
+.toggle { display: none; }
 
 .card-img {
-    height: 200px;
+    height: 180px;
     background-size: cover;
     background-position: center;
-    background-color: #f0f0f0;
 }
 
 .info { padding: 20px; }
@@ -66,30 +59,49 @@ body {
 .badge {
     background: var(--fuchsia);
     color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
+    padding: 4px 10px;
+    border-radius: 10px;
     font-size: 0.7em;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
-.info h3 { margin: 12px 0 6px 0; color: #333; }
-.info p { margin: 0; font-size: 0.9em; color: #666; line-height: 1.5; }
+.clic-info {
+    color: var(--fuchsia);
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* LE SECRET DE L'INTERACTIVITÉ */
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+/* Quand la carte est "cochée" (cliquée) */
+.toggle:checked + label .details {
+    max-height: 250px; /* Le texte apparaît */
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.toggle:checked + label .clic-info {
+    display: none; /* On cache l'instruction quand c'est ouvert */
+}
 
 footer {
-    background: #1a1a1a;
+    background: #222;
     color: white;
     text-align: center;
-    padding: 30px;
-    font-size: 0.8em;
+    padding: 25px;
 }
 
 @media (min-width: 700px) {
-    .container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    .card { margin-bottom: 0; width: 300px; }
+    .container { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .card { width: 300px; }
 }
