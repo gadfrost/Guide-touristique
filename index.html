@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Shi Guide d'Odile ✨</title>
+    <title>L'Shi Guide Interactif ✨</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
 </head>
@@ -14,59 +14,91 @@
     </nav>
 
     <header class="hero">
-        <h1>Hola ! C'est Odile 🌸</h1>
-        <p>Les pépites de Lubumbashi en un clic. Plus fun qu'Excel ! 🚀</p>
+        <h1>Explore L'Shi ! 🌸</h1>
+        <p>Appuie sur une image pour découvrir ses secrets... 🤫✨</p>
     </header>
 
     <div class="container">
+        
         <div class="card">
-            <div class="card-img" style="background-image: url('images/karavia.jpg');"></div>
-            <div class="info">
-                <span class="badge">Luxe</span>
-                <h3>Hôtel Karavia</h3>
-                <p>Le spot icônique au bord du lac pour un sunset inoubliable. 🌅</p>
-            </div>
+            <input type="checkbox" id="check-karavia" class="toggle">
+            <label for="check-karavia">
+                <div class="card-img" style="background-image: url('images/karavia.jpg');"></div>
+                <div class="info">
+                    <span class="badge">Luxe</span>
+                    <h3>Hôtel Karavia</h3>
+                    <p class="clic-info">Toucher pour en savoir plus 👆</p>
+                    <div class="details">
+                        Cet endroit est le symbole de l'élégance à Lubumbashi. Situé au bord du Lac Tshombe, il accueille les visiteurs du monde entier. C'est un lieu associé au calme et au prestige, idéal pour les grands événements ou simplement pour admirer la nature environnante.
+                    </div>
+                </div>
+            </label>
         </div>
 
         <div class="card">
-            <div class="card-img" style="background-image: url('images/assemblee.jpg');"></div>
-            <div class="info">
-                <span class="badge" style="background: #00ced1;">Culture</span>
-                <h3>Assemblée Provinciale</h3>
-                <p>Le siège du Haut-Katanga, un bâtiment imposant et chargé d'histoire. 🏛️</p>
-            </div>
+            <input type="checkbox" id="check-assemblee" class="toggle">
+            <label for="check-assemblee">
+                <div class="card-img" style="background-image: url('images/assemblee.jpg');"></div>
+                <div class="info">
+                    <span class="badge" style="background: #00ced1;">Culture</span>
+                    <h3>Assemblée Provinciale</h3>
+                    <p class="clic-info">Toucher pour en savoir plus 👆</p>
+                    <div class="details">
+                        C'est ici que se joue l'avenir de notre province du Haut-Katanga. Ce bâtiment est associé au pouvoir législatif. Il est impressionnant par son architecture moderne et son importance politique, représentant la voix des citoyens de la région.
+                    </div>
+                </div>
+            </label>
         </div>
 
         <div class="card">
-            <div class="card-img" style="background-image: url('images/stade.jpg');"></div>
-            <div class="info">
-                <span class="badge" style="background: #ff8c00;">Sport</span>
-                <h3>Stade TP Mazembe</h3>
-                <p>Le temple du football ! Ici, l'énergie des Corbeaux est totale. ⚽🔥</p>
-            </div>
+            <input type="checkbox" id="check-stade" class="toggle">
+            <label for="check-stade">
+                <div class="card-img" style="background-image: url('images/stade.jpg');"></div>
+                <div class="info">
+                    <span class="badge" style="background: #ff8c00;">Sport</span>
+                    <h3>Stade TP Mazembe</h3>
+                    <p class="clic-info">Toucher pour en savoir plus 👆</p>
+                    <div class="details">
+                        Le temple du football congolais ! Cet endroit est associé à la ferveur des "Corbeaux". C'est un lieu qui vibre lors de chaque match, faisant de Lubumbashi une capitale sportive respectée dans toute l'Afrique. Une fierté locale absolue !
+                    </div>
+                </div>
+            </label>
         </div>
 
         <div class="card">
-            <div class="card-img" style="background-image: url('images/cathedrale.jpg');"></div>
-            <div class="info">
-                <span class="badge" style="background: #8a2be2;">Patrimoine</span>
-                <h3>La Cathédrale</h3>
-                <p>Architecture magnifique au centre-ville. Un passage obligatoire ! ✨</p>
-            </div>
+            <input type="checkbox" id="check-cathedrale" class="toggle">
+            <label for="check-cathedrale">
+                <div class="card-img" style="background-image: url('images/cathédrale.jpg');"></div>
+                <div class="info">
+                    <span class="badge" style="background: #8a2be2;">Patrimoine</span>
+                    <h3>La Cathédrale</h3>
+                    <p class="clic-info">Toucher pour en savoir plus 👆</p>
+                    <div class="details">
+                        La Cathédrale Saints-Pierre-et-Paul est un monument historique majeur. Associée à l'histoire coloniale et religieuse, elle se distingue par ses briques rouges et son style majestueux. C'est un endroit de paix au cœur de l'agitation urbaine.
+                    </div>
+                </div>
+            </label>
         </div>
 
         <div class="card">
-            <div class="card-img" style="background-image: url('images/30juin.jpg');"></div>
-            <div class="info">
-                <span class="badge" style="background: #cc0000;">Histoire</span>
-                <h3>Bâtiment du 30 Juin</h3>
-                <p>Un symbole fort de notre ville, majestueux sous les lumières. 🇨🇩</p>
-            </div>
+            <input type="checkbox" id="check-30juin" class="toggle">
+            <label for="check-30juin">
+                <div class="card-img" style="background-image: url('images/30juin.jpg');"></div>
+                <div class="info">
+                    <span class="badge" style="background: #cc0000;">Histoire</span>
+                    <h3>Bâtiment du 30 Juin</h3>
+                    <p class="clic-info">Toucher pour en savoir plus 👆</p>
+                    <div class="details">
+                        Nommé en hommage à l'indépendance de la RDC, ce bâtiment est un point de repère central. Il est associé à l'administration et à la vie citoyenne. Sa structure imposante rappelle à tous la force et la résilience de Lubumbashi.
+                    </div>
+                </div>
+            </label>
         </div>
+
     </div>
 
     <footer>
-        <p>Fait avec ❤️ par Odile • 6ème Info • 2026 💻</p>
+        <p>Projet Interactif d'Odile • Future Dev 💻</p>
     </footer>
 
 </body>
